@@ -1,0 +1,23 @@
+.root {
+  background-color: #F2F2F2;
+  min-height: 100vh;
+}
+
+.title {
+  color: #7F7F7F;
+  font-size: 32px;
+  text-align: center;
+  padding-top: 120px;
+  padding-bottom: 50px;
+  font-weight: 300;
+}
+
+.container {
+  margin-left: 130px;
+  margin-right: 130px;
+  justify-content: center;
+  /*align-content: stretch;*/
+  display:flex;
+  flex-wrap: wrap;
+  align-items: stretch;
+}
