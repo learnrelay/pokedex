@@ -2,7 +2,7 @@
 
 Pokedex example app using and teaching Relay and GraphQL
 
-Live Demo: [http://demo.learnrelay.org](http://demo.learnrelay.org/)
+> **Live Demo: [http://demo.learnrelay.org](http://demo.learnrelay.org/)**
 
 ![](https://i.gyazo.com/adcc4675cd466195adf727ba8a32b544.gif)
 
