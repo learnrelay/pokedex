@@ -4,15 +4,16 @@ set -e
 
 message="$1"
 
-for dir in step-*
+for dir in branch-step-*
 do
 	cp -r $dir tmp
 	cp -rf .git tmp
 	cd tmp
-	git checkout -B $dir
+  branch=${dir/"branch-"/""}
+	git checkout -B $branch
 	git add .
 	git commit -m "$message"
-	git push -f origin $dir
+	git push -f origin $branch
 	cd ..
 	rm -rf tmp
 done
