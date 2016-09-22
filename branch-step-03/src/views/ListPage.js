@@ -15,6 +15,7 @@ class ListPage extends React.Component {
           {`There are 28 Pokemons in your pokedex`}
         </div>
         <div className={classes.container}>
+          {/* Iterate through pokemon here */}
         </div>
       </div>
     )
