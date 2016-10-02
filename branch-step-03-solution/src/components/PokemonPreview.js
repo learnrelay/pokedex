@@ -1,6 +1,5 @@
 import React from 'react'
 import Relay from 'react-relay'
-import { withRouter } from 'react-router'
 import classes from './PokemonPreview.css'
 
 class PokemonPreview extends React.Component {
@@ -25,7 +24,7 @@ class PokemonPreview extends React.Component {
 }
 
 export default Relay.createContainer(
-  withRouter(PokemonPreview),
+  PokemonPreview,
   {
     fragments: {
       pokemon: () => Relay.QL`

@@ -1,8 +1,8 @@
 import React from 'react'
-import {withRouter, Link} from 'react-router'
+import {Link} from 'react-router'
 import classes from './AddNew.css'
 
-class AddNew extends React.Component {
+export default class AddNew extends React.Component {
 
   render () {
     return (
@@ -20,4 +20,3 @@ class AddNew extends React.Component {
   }
 }
 
-export default withRouter(AddNew)

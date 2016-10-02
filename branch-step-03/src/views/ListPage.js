@@ -1,6 +1,5 @@
 import React from 'react'
 import Relay from 'react-relay'
-import {withRouter} from 'react-router'
 import PokemonPreview from '../components/PokemonPreview'
 import classes from './ListPage.css'
 
@@ -23,7 +22,7 @@ class ListPage extends React.Component {
 }
 
 export default Relay.createContainer(
-  withRouter(ListPage),
+  ListPage,
   {
     fragments: {
       viewer: () => Relay.QL`
