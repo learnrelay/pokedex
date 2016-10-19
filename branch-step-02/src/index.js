@@ -10,8 +10,6 @@ Relay.injectNetworkLayer(
   new Relay.DefaultNetworkLayer('https://api.graph.cool/relay/v1/__PROJECT_ID__')
 )
 
-const ViewerQueries = { viewer: () => Relay.QL`query { viewer }` }
-
 ReactDOM.render(
   <Router
     forceFetch
@@ -19,7 +17,7 @@ ReactDOM.render(
     render={applyRouterMiddleware(useRelay)}
     history={browserHistory}
   >
-    <Route path='/' component={ListPage}/>
+    <Route path='/' component={ListPage} />
   </Router>
   , document.getElementById('root')
 )
