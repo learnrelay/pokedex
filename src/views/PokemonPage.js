@@ -21,7 +21,7 @@ class PokemonPage extends React.Component {
   }
 
   _isAddNew = () => {
-
+    return !this.props.params.hasOwnProperty('id')
   }
 
   render () {
@@ -64,6 +64,25 @@ class PokemonPage extends React.Component {
 export default Relay.createContainer(
   PokemonPage,
   {
+    initialVariables: {
+      id: null,
+      pokemonExists: false,
+    },
+    prepareVariables: (prevVariables) => Object.assign({}, prevVariables, {
+      pokemonExists: prevVariables.id !== null,
+    }),
+    fragments: {
+      viewer: () => Relay.QL`
+        fragment on Viewer {
+          id
+          Pokemon(id: $id) @include( if: $pokemonExists ) {
+            id
+            name
+            url
 
+          }
+        }
+      `,
+    },
   },
 )
