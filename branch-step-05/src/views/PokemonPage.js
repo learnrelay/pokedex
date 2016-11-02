@@ -1,5 +1,6 @@
 import React from 'react'
 import Relay from 'react-relay'
+import {withRouter} from 'react-router'
 import PokemonCard from '../components/PokemonCard'
 import deleteIcon from '../assets/delete.svg'
 import classes from './PokemonPage.css'
@@ -62,7 +63,7 @@ class PokemonPage extends React.Component {
 }
 
 export default Relay.createContainer(
-  PokemonPage,
+  withRouter(PokemonPage),
   {
     initialVariables: {
       id: null,
@@ -79,7 +80,7 @@ export default Relay.createContainer(
             id
             name
             url
-
+          
           }
         }
       `,
