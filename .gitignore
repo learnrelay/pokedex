@@ -1,4 +1,6 @@
-*/node_modules
 node_modules
+logs
+*.log
+npm-debug.log*
 .idea
 .DB_Store
