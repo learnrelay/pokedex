@@ -1,6 +1,7 @@
 import React from 'react'
 import Relay from 'react-relay'
 import PokemonPreview from '../components/PokemonPreview'
+import AddNew from '../components/AddNew'
 import classes from './ListPage.css'
 
 class ListPage extends React.Component {
@@ -18,6 +19,7 @@ class ListPage extends React.Component {
             <PokemonPreview key={pokemon.id} pokemon={pokemon} />
           )
           }
+          <AddNew />
         </div>
       </div>
     )
@@ -30,7 +32,7 @@ export default Relay.createContainer(
     fragments: {
       viewer: () => Relay.QL`
         fragment on Viewer {
-          allPokemons (first: 1000) {
+          allPokemons (first: 100000) {
             edges {
               node {
                 ${PokemonPreview.getFragment('pokemon')}
