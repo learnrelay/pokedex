@@ -8,7 +8,7 @@ Pokedex example app using and teaching Relay and GraphQL
 
 ## Getting started
 
-If you haven't done it already, checkout the [interactive Learn Relay tutorial](https://learnrelay.org/).
+If you haven't done it already, checkout the [interactive Learn Relay tutorial](https://www.learnrelay.org/).
 
 ```sh
 git clone git@github.com:learnrelay/pokedex.git
